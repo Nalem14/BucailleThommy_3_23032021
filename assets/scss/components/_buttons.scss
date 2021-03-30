@@ -1,7 +1,14 @@
 .btn {
-    @include btn;
-
-    &--primary {
-        @include btn-primary;
-    }
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 1px 5px 8px #c3c3c3;
+    margin: 5px;
+    color: #FFF;
+    transition-duration: 200ms;
+    background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
 }
