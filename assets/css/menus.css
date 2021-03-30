@@ -64,6 +64,25 @@ html, body {
   transition-duration: 200ms;
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%); }
 
+footer {
+  background-color: #353535;
+  color: #fff; }
+  footer div {
+    padding: 20px; }
+    footer div h2 {
+      font-weight: bold;
+      font-family: Shrikhand, Arial, sans-serif;
+      margin-bottom: 15px; }
+    footer div ul li {
+      font-size: 14px;
+      margin-top: 5px;
+      margin-bottom: 10px; }
+      footer div ul li a {
+        text-decoration: none;
+        color: #fff; }
+      footer div ul li i {
+        width: 24px; }
+
 header {
   display: flex;
   flex-direction: column; }
