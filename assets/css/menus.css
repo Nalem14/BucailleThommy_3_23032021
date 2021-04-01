@@ -48,7 +48,8 @@ table {
   border-spacing: 0; }
 
 html, body {
-  font-family: Roboto, Arial, sans-serif; }
+  font-family: Roboto, Arial, sans-serif;
+  box-sizing: border-box; }
 
 .btn {
   height: 40px;
@@ -68,7 +69,9 @@ footer {
   background-color: #353535;
   color: #fff; }
   footer div {
-    padding: 20px; }
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; }
     footer div h2 {
       font-weight: bold;
       font-family: Shrikhand, Arial, sans-serif;

@@ -48,7 +48,8 @@ table {
   border-spacing: 0; }
 
 html, body {
-  font-family: Roboto, Arial, sans-serif; }
+  font-family: Roboto, Arial, sans-serif;
+  box-sizing: border-box; }
 
 .btn {
   height: 40px;
@@ -68,7 +69,9 @@ footer {
   background-color: #353535;
   color: #fff; }
   footer div {
-    padding: 20px; }
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; }
     footer div h2 {
       font-weight: bold;
       font-family: Shrikhand, Arial, sans-serif;
@@ -105,6 +108,10 @@ header {
     header figure img {
       margin-top: 10px;
       width: 10em; }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto; }
 
 section {
   padding: 20px; }
@@ -223,9 +230,6 @@ main #restaurants {
       main #restaurants article {
         flex: 1 0 45%;
         margin-right: 1%; } }
-    @media screen and (min-width: 1200px) {
-      main #restaurants article {
-        flex-basis: 24%; } }
     main #restaurants article a {
       text-decoration: none;
       color: #000; }
