@@ -11,23 +11,10 @@ footer {
             margin-bottom: 15px;
         }
 
-        ul {
-            @media screen AND (min-width:576px) {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-        }
-
         ul li {
             font-size: 14px;
             margin-top: 5px;
             margin-bottom: 10px;
-
-            @media screen AND (min-width:576px) {
-                flex: 1 0 50%;
-            }
 
             a {
                 text-decoration: none;
