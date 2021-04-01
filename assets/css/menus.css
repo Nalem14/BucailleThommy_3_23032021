@@ -73,10 +73,19 @@ footer {
       font-weight: bold;
       font-family: Shrikhand, Arial, sans-serif;
       margin-bottom: 15px; }
+    @media screen and (min-width: 768px) {
+      footer div ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap; } }
     footer div ul li {
       font-size: 14px;
       margin-top: 5px;
       margin-bottom: 10px; }
+      @media screen and (min-width: 768px) {
+        footer div ul li {
+          flex: 1 0 50%; } }
       footer div ul li a {
         text-decoration: none;
         color: #fff; }
