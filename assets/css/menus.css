@@ -210,15 +210,10 @@ main #menu {
       box-shadow: 0px 3px 8px #e5e5e5; }
       main #menu section article > div:first-child {
         display: flex;
-        flex-basis: 70%;
-        max-width: 70%;
+        flex: 2 0 0;
         flex-direction: column;
         justify-content: center;
         height: 100%; }
-        @media screen and (min-width: 768px) {
-          main #menu section article > div:first-child {
-            flex-basis: 80%;
-            max-width: 80%; } }
         main #menu section article > div:first-child h3 {
           font-weight: bold 100;
           font-size: 1.1em;
@@ -233,33 +228,33 @@ main #menu {
           white-space: nowrap; }
       main #menu section article > div:last-child {
         display: flex;
-        justify-content: center;
-        flex-basis: 30%;
+        justify-content: right;
+        flex: 0 0 auto;
         height: 100%; }
-        @media screen and (min-width: 768px) {
-          main #menu section article > div:last-child {
-            flex-basis: 20%; } }
         main #menu section article > div:last-child span {
           display: flex;
+          flex: 0 0 auto;
           align-items: center;
-          margin-right: 20px; }
+          margin-right: 10px; }
         main #menu section article > div:last-child div {
           display: flex;
-          flex: 1; }
+          flex: 0 0 auto; }
           main #menu section article > div:last-child div input[type=checkbox] {
             display: none; }
             main #menu section article > div:last-child div input[type=checkbox]:checked + label {
               opacity: 1;
               background-color: #5dd1b5;
-              height: 100%;
+              width: auto;
+              height: auto;
               flex: 1 0 100%; }
               main #menu section article > div:last-child div input[type=checkbox]:checked + label i {
                 transition-duration: 450ms;
-                font-size: 32px;
+                font-size: 28px;
                 transform: rotate(360deg); }
           main #menu section article > div:last-child div label {
             transition-duration: 200ms;
             display: flex;
+            overflow: hidden;
             opacity: 0;
             color: #FFF;
             font-size: 24px;
@@ -267,12 +262,17 @@ main #menu {
             border-radius: 0 20px 20px 0;
             align-items: center;
             justify-content: center;
-            flex: 0 0 0%; }
+            flex: 0 0 0;
+            width: 0;
+            height: 0; }
             main #menu section article > div:last-child div label i {
+              width: 32px;
               transition-duration: 200ms;
               font-size: 24px; }
       main #menu section article:hover div:last-child div input[type=checkbox] + label {
         transition-duration: 400ms;
         opacity: 1;
-        flex: 1 0 100%; }
+        flex: 1 0 100%;
+        width: auto;
+        height: auto; }
 
