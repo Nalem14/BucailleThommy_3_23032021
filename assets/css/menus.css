@@ -127,6 +127,19 @@ main figure {
   display: flex;
   flex-grow: 1;
   justify-content: center; }
+  @media screen and (min-width: 992px) {
+    main figure {
+      height: 400px; }
+      main figure::before {
+        content: '';
+        position: absolute;
+        display: flex;
+        left: 0;
+        top: 260px;
+        height: 200px;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+        z-index: -10; } }
   main figure img {
     z-index: -100;
     -o-object-fit: cover;
@@ -134,12 +147,21 @@ main figure {
     width: 100%; }
 
 main #menu {
+  max-width: 992px;
+  margin: 0 auto;
   background-color: #f6f6f6;
   border-radius: 30px;
   margin-top: -40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
+  @media screen and (min-width: 768px) {
+    main #menu {
+      padding-left: 60px;
+      padding-right: 60px; } }
+  @media screen and (min-width: 992px) {
+    main #menu {
+      margin-top: -160px; } }
   main #menu form {
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +215,10 @@ main #menu {
         flex-direction: column;
         justify-content: center;
         height: 100%; }
+        @media screen and (min-width: 768px) {
+          main #menu section article > div:first-child {
+            flex-basis: 80%;
+            max-width: 80%; } }
         main #menu section article > div:first-child h3 {
           font-weight: bold 100;
           font-size: 1.1em;
@@ -210,6 +236,9 @@ main #menu {
         justify-content: center;
         flex-basis: 30%;
         height: 100%; }
+        @media screen and (min-width: 768px) {
+          main #menu section article > div:last-child {
+            flex-basis: 20%; } }
         main #menu section article > div:last-child span {
           display: flex;
           align-items: center;
