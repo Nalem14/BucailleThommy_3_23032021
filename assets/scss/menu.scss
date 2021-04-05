@@ -44,6 +44,13 @@ main {
         flex-wrap: wrap;
         justify-content: space-between;
 
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            justify-content: center;
+        }
+
         h1 {
             font-family: Shrikhand, arial, sans-serif;
             font-size: 1.4em;
@@ -68,17 +75,22 @@ main {
         section {
             padding: 0;
             margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+
             h2 {
+                flex-basis: 100%;
+                text-transform: uppercase;
+
                 &::after {
                     content: "";
                     display: flex;
-                    width: 15%;
+                    width: 10%;
                     height: 3px;
                     background-color: $color-tertiary;
                     margin-top: 5px;
                     margin-bottom: 15px;
                 }
-                text-transform: uppercase;
             }
 
             // Each cards
@@ -87,50 +99,95 @@ main {
                 border-radius: 20px;
                 margin-bottom: 15px;
                 display: flex;
+                flex-direction: row;
+                flex: 1 0 100%;
                 justify-content: space-between;
                 align-items: center;
                 height: 80px;
                 box-shadow: 0px 3px 8px #e5e5e5;
 
                 // Left section
-                div:first-child {
-                    margin-left: 10px;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                > div:first-child {
+                    display: flex;
+                    flex-basis: 70%;
+                    max-width: 70%;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
 
                     h3 {
                         font-weight: bold 100;
                         font-size: 1.1em;
+                        margin-left: 10px;
                     }
 
                     p {
+                        margin-left: 10px;
                         margin-top: 5px;
                         font-weight: 100;
                         font-size: 16px;
+                        text-overflow: ellipsis; 
+                        overflow: hidden; 
+                        white-space: nowrap;
                     }
                 }
 
                 // Right section
-                div:last-child {
-                    margin-right: 15px;
+                > div:last-child {
                     display: flex;
-                    justify-content: space-between;
-                    
+                    justify-content: center;
+                    flex-basis: 30%;
+                    height: 100%;
+
                     // Price
                     span {
-                        height: 100%;
-                        margin-bottom: auto;
+                        display: flex;
+                        align-items: center;
+                        margin-right: 20px;
                     }
 
-                    // Checkbox
+                    // Checkbox container
                     div {
-                        display: none;
+                        display: flex;
+                        flex: 1;
+
+                        input[type=checkbox] {
+                            display: none;
+
+                            &:checked + label {
+                                opacity: 1;
+                                background-color: darken($color-tertiary, 15%);
+                                height: 100%;
+                                flex: 1 0 100%;
+                            }
+                        }
+
+                        label {
+                            transition-duration: 200ms;
+                            display: flex;
+                            opacity: 0;
+                            color: #FFF;
+                            font-size: 24px;
+                            background-color: $color-tertiary;
+                            border-radius: 0 20px 20px 0;
+                            align-items: center;
+                            justify-content: center;
+                            flex: 0 0 0%;
+                        }
                     }
                 }
 
+                // Card:hover
                 &:hover {
+
+                    // Checkbox container
                     div:last-child div {
-                        display: flex;
+
+                        input[type=checkbox] + label {
+                            transition-duration: 400ms;
+                            opacity: 1;
+                            flex: 1 0 100%;
+                        }
                     }
                 }
             }
