@@ -201,6 +201,12 @@ main {
                                 background-color: darken($color-tertiary, 15%);
                                 height: 100%;
                                 flex: 1 0 100%;
+
+                                i {
+                                    transition-duration: 450ms;
+                                    font-size: 32px;
+                                    transform: rotate(360deg);
+                                }
                             }
                         }
 
@@ -215,6 +221,11 @@ main {
                             align-items: center;
                             justify-content: center;
                             flex: 0 0 0%;
+
+                            i {
+                                transition-duration: 200ms;
+                                font-size: 24px;
+                            }
                         }
                     }
                 }
