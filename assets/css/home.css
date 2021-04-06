@@ -47,7 +47,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-html, body {
+html, body, *, *:before, *:after {
   font-family: Roboto, Arial, sans-serif;
   box-sizing: border-box; }
 
@@ -67,7 +67,9 @@ html, body {
   margin: 5px;
   color: #FFF;
   transition-duration: 200ms;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%); }
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  border: none;
+  cursor: pointer; }
 
 footer {
   background-color: #353535;
