@@ -81,32 +81,43 @@ html, body, *, *:before, *:after {
 
 @-webkit-keyframes heart {
   from {
-    width: 1em; }
+    color: #d87070;
+    transform: scale(1); }
   50% {
     opacity: .3;
-    width: 2.2em; }
+    transform: scale(2.2); }
   to {
-    width: 1.7em; } }
+    transform: scale(1.5);
+    color: #a42d2d; } }
 
 @keyframes heart {
   from {
-    width: 1em; }
+    color: #d87070;
+    transform: scale(1); }
   50% {
     opacity: .3;
-    width: 2.2em; }
+    transform: scale(2.2); }
   to {
-    width: 1.7em; } }
+    transform: scale(1.5);
+    color: #a42d2d; } }
 
 .heart {
   cursor: pointer;
   display: flex;
-  height: 2em;
-  width: 2em; }
-  .heart img {
-    width: 1.3em; }
-  .heart:hover img {
+  height: 1.5em;
+  width: 1.5em;
+  overflow: hidden;
+  position: relative; }
+  .heart svg:first-child {
+    color: #d87070; }
+  .heart svg:last-child {
+    position: absolute;
+    transform: translateY(100px); }
+  .heart:hover {
     -webkit-animation: ease-in-out heart 400ms both;
             animation: ease-in-out heart 400ms both; }
+    .heart:hover svg:last-child {
+      transform: translateY(0); }
 
 footer {
   background-color: #353535;

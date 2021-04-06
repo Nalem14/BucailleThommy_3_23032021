@@ -1,15 +1,17 @@
 @keyframes heart {
     from {
-      width: 1em;
+        color: rgb(216, 112, 112);
+        transform: scale(1);
     }
 
     50% {
         opacity: .3;
-        width: 2.2em;
+        transform: scale(2.2);
     }
   
     to {
-      width: 1.7em;
+        transform: scale(1.5);
+        color: rgb(164, 45, 45);
     }
   }
 
@@ -17,16 +19,24 @@
   .heart {
     cursor: pointer;
     display: flex;
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
+    overflow: hidden;
+    position: relative;
 
-    img {
-        width: 1.3em;
+    svg:first-child {
+        color: rgb(216, 112, 112);
     }
 
+    svg:last-child {
+        position: absolute;
+        transform: translateY(100px);
+    }
+ 
     &:hover {
-        img {
-            animation: ease-in-out heart 400ms both;
+        animation: ease-in-out heart 400ms both;
+        svg:last-child {
+            transform: translateY(0);
         }
     }
   }
