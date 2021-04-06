@@ -83,6 +83,7 @@ html, body, *, *:before, *:after {
   from {
     width: 1em; }
   50% {
+    opacity: .3;
     width: 2.2em; }
   to {
     width: 1.7em; } }
@@ -91,6 +92,7 @@ html, body, *, *:before, *:after {
   from {
     width: 1em; }
   50% {
+    opacity: .3;
     width: 2.2em; }
   to {
     width: 1.7em; } }
