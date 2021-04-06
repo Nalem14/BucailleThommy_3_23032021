@@ -81,25 +81,21 @@ html, body, *, *:before, *:after {
 
 @-webkit-keyframes heart {
   from {
-    color: #d87070;
     transform: scale(1); }
   50% {
     opacity: .3;
     transform: scale(2.2); }
   to {
-    transform: scale(1.5);
-    color: #a42d2d; } }
+    transform: scale(1.5); } }
 
 @keyframes heart {
   from {
-    color: #d87070;
     transform: scale(1); }
   50% {
     opacity: .3;
     transform: scale(2.2); }
   to {
-    transform: scale(1.5);
-    color: #a42d2d; } }
+    transform: scale(1.5); } }
 
 .heart {
   cursor: pointer;
@@ -111,13 +107,17 @@ html, body, *, *:before, *:after {
   .heart svg:first-child {
     color: #d87070; }
   .heart svg:last-child {
+    color: #d87070;
     position: absolute;
-    transform: translateY(100px); }
+    transition: transform 0.1s linear;
+    transform: scale(0); }
   .heart:hover {
     -webkit-animation: ease-in-out heart 400ms both;
             animation: ease-in-out heart 400ms both; }
     .heart:hover svg:last-child {
-      transform: translateY(0); }
+      color: #a42d2d;
+      transition: transform 0.2s linear, opacity 0.2s linear;
+      transform: scale(1); }
 
 footer {
   background-color: #353535;

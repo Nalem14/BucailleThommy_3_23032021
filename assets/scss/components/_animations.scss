@@ -1,6 +1,5 @@
 @keyframes heart {
     from {
-        color: rgb(216, 112, 112);
         transform: scale(1);
     }
 
@@ -11,7 +10,6 @@
   
     to {
         transform: scale(1.5);
-        color: rgb(164, 45, 45);
     }
   }
 
@@ -29,14 +27,18 @@
     }
 
     svg:last-child {
+        color: rgb(216, 112, 112);
         position: absolute;
-        transform: translateY(100px);
+        transition: transform 0.1s linear;
+        transform: scale(0)
     }
  
     &:hover {
         animation: ease-in-out heart 400ms both;
         svg:last-child {
-            transform: translateY(0);
+            color: rgb(164, 45, 45);
+            transition: transform 0.2s linear, opacity 0.2s linear;;
+            transform: scale(1);
         }
     }
   }
