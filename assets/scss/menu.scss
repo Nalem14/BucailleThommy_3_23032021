@@ -125,9 +125,10 @@ main {
                 border-radius: 20px;
                 margin-bottom: 15px;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-around;
                 flex-direction: row;
-                flex: 0 0 95%;
+                flex: 0 0 100%;
                 //justify-content: space-between;
                 //align-items: center;
                 height: 80px;
