@@ -208,7 +208,7 @@ main #menu {
       height: 80px;
       box-shadow: 0px 3px 8px #e5e5e5;
       padding-left: 15px;
-      padding-right: 10px;
+      padding-right: 15px;
       min-width: 0; }
       main #menu section article > div:first-child {
         transition-duration: 400ms;
@@ -231,7 +231,8 @@ main #menu {
         transition-duration: 400ms;
         display: flex;
         flex: 1 1 10%;
-        align-items: center;
+        align-items: flex-end;
+        margin-bottom: 20px;
         justify-content: right; }
       main #menu section article > div:last-child {
         transition-duration: 200ms;
