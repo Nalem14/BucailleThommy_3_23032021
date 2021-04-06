@@ -79,6 +79,22 @@ html, body, *, *:before, *:after {
     opacity: .75;
     box-shadow: 3px 10px 16px #c3c3c3; }
 
+@-webkit-keyframes heart {
+  from {
+    width: 1em; }
+  50% {
+    width: 2.2em; }
+  to {
+    width: 1.7em; } }
+
+@keyframes heart {
+  from {
+    width: 1em; }
+  50% {
+    width: 2.2em; }
+  to {
+    width: 1.7em; } }
+
 footer {
   background-color: #353535;
   color: #fff; }
@@ -253,11 +269,7 @@ main #restaurants {
           margin-left: 15px;
           margin-bottom: 15px;
           line-height: 24px; }
-      main #restaurants div article i {
-        margin-right: 20px;
-        font-size: 1.3em;
-        font-weight: 100; }
-      main #restaurants div article figure {
+      main #restaurants div article figure:first-child {
         border-radius: 15px 15px 0 0;
         overflow: hidden;
         flex-basis: 100%;
@@ -266,6 +278,16 @@ main #restaurants {
         display: flex;
         align-items: center;
         margin-bottom: 15px; }
-        main #restaurants div article figure img {
+        main #restaurants div article figure:first-child img {
           width: 100%; }
+      main #restaurants div article figure:last-child {
+        cursor: pointer;
+        display: flex;
+        margin-right: 20px;
+        margin-bottom: auto; }
+        main #restaurants div article figure:last-child img {
+          width: 1.3em; }
+        main #restaurants div article figure:last-child:hover img {
+          -webkit-animation: ease-in-out heart 400ms both;
+                  animation: ease-in-out heart 400ms both; }
 

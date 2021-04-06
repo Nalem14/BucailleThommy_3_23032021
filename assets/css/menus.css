@@ -79,6 +79,22 @@ html, body, *, *:before, *:after {
     opacity: .75;
     box-shadow: 3px 10px 16px #c3c3c3; }
 
+@-webkit-keyframes heart {
+  from {
+    width: 1em; }
+  50% {
+    width: 2.2em; }
+  to {
+    width: 1.7em; } }
+
+@keyframes heart {
+  from {
+    width: 1em; }
+  50% {
+    width: 2.2em; }
+  to {
+    width: 1.7em; } }
+
 footer {
   background-color: #353535;
   color: #fff; }
