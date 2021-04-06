@@ -95,6 +95,17 @@ html, body, *, *:before, *:after {
   to {
     width: 1.7em; } }
 
+.heart {
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  width: 2em; }
+  .heart img {
+    width: 1.3em; }
+  .heart:hover img {
+    -webkit-animation: ease-in-out heart 400ms both;
+            animation: ease-in-out heart 400ms both; }
+
 footer {
   background-color: #353535;
   color: #fff; }
@@ -280,14 +291,7 @@ main #restaurants {
         margin-bottom: 15px; }
         main #restaurants div article figure:first-child img {
           width: 100%; }
-      main #restaurants div article figure:last-child {
-        cursor: pointer;
-        display: flex;
+      main #restaurants div article .heart {
         margin-right: 20px;
         margin-bottom: auto; }
-        main #restaurants div article figure:last-child img {
-          width: 1.3em; }
-        main #restaurants div article figure:last-child:hover img {
-          -webkit-animation: ease-in-out heart 400ms both;
-                  animation: ease-in-out heart 400ms both; }
 

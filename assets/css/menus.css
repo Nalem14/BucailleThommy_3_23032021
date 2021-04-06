@@ -95,6 +95,17 @@ html, body, *, *:before, *:after {
   to {
     width: 1.7em; } }
 
+.heart {
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  width: 2em; }
+  .heart img {
+    width: 1.3em; }
+  .heart:hover img {
+    -webkit-animation: ease-in-out heart 400ms both;
+            animation: ease-in-out heart 400ms both; }
+
 footer {
   background-color: #353535;
   color: #fff; }
@@ -190,6 +201,9 @@ main #menu {
     font-family: Shrikhand, arial, sans-serif;
     font-size: 1.4em;
     margin-top: 10px; }
+  main #menu .heart {
+    margin-top: 5px;
+    line-height: 2em; }
   main #menu a {
     color: #000;
     font-weight: 100;

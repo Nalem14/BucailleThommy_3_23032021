@@ -11,3 +11,21 @@
       width: 1.7em;
     }
   }
+
+
+  .heart {
+    cursor: pointer;
+    display: flex;
+    height: 2em;
+    width: 2em;
+
+    img {
+        width: 1.3em;
+    }
+
+    &:hover {
+        img {
+            animation: ease-in-out heart 400ms both;
+        }
+    }
+  }

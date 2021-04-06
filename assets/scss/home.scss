@@ -198,21 +198,9 @@ main {
                 }
 
                 // Heart
-                figure:last-child {
-                    cursor: pointer;
-                    display: flex;
+                .heart {
                     margin-right: 20px;
                     margin-bottom: auto;
-
-                    img {
-                        width: 1.3em;
-                    }
-
-                    &:hover {
-                        img {
-                            animation: ease-in-out heart 400ms both;
-                        }
-                    }
                 }
             }
         }
