@@ -187,18 +187,18 @@ main {
                         input[type=checkbox] {
                             display: none;
 
-                            &:checked + label {
-                                opacity: 1;
-                                background-color: darken($color-tertiary, 15%);
-                                width: auto; height: auto;
-                                flex: 1 0 100%;
+                            // &:checked + label {
+                            //     opacity: 1;
+                            //     background-color: darken($color-tertiary, 15%);
+                            //     width: auto; height: auto;
+                            //     flex: 1 0 100%;
 
-                                i {
-                                    transition-duration: 450ms;
-                                    font-size: 28px;
-                                    transform: rotate(360deg);
-                                }
-                            }
+                            //     i {
+                            //         transition-duration: 450ms;
+                            //         font-size: 28px;
+                            //         transform: rotate(360deg);
+                            //     }
+                            // }
                         }
 
                         label {
@@ -225,19 +225,19 @@ main {
                 }
 
                 // Card:hover
-                &:hover {
+                // &:hover {
 
-                    // Checkbox container
-                    div:last-child div {
+                //     // Checkbox container
+                //     div:last-child div {
 
-                        input[type=checkbox] + label {
-                            transition-duration: 400ms;
-                            opacity: 1;
-                            flex: 1 0 100%;
-                            width: auto; height: auto;
-                        }
-                    }
-                }
+                //         input[type=checkbox] + label {
+                //             transition-duration: 400ms;
+                //             opacity: 1;
+                //             flex: 1 0 100%;
+                //             width: auto; height: auto;
+                //         }
+                //     }
+                // }
             }
         }
     }

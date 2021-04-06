@@ -241,16 +241,6 @@ main #menu {
           flex: 0 0 auto; }
           main #menu section article > div:last-child div input[type=checkbox] {
             display: none; }
-            main #menu section article > div:last-child div input[type=checkbox]:checked + label {
-              opacity: 1;
-              background-color: #5dd1b5;
-              width: auto;
-              height: auto;
-              flex: 1 0 100%; }
-              main #menu section article > div:last-child div input[type=checkbox]:checked + label i {
-                transition-duration: 450ms;
-                font-size: 28px;
-                transform: rotate(360deg); }
           main #menu section article > div:last-child div label {
             transition-duration: 200ms;
             display: flex;
@@ -269,10 +259,4 @@ main #menu {
               width: 32px;
               transition-duration: 200ms;
               font-size: 24px; }
-      main #menu section article:hover div:last-child div input[type=checkbox] + label {
-        transition-duration: 400ms;
-        opacity: 1;
-        flex: 1 0 100%;
-        width: auto;
-        height: auto; }
 
