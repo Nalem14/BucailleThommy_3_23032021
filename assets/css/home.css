@@ -109,14 +109,14 @@ html, body, *, *:before, *:after {
   .heart svg:last-child {
     color: #d87070;
     position: absolute;
-    transition: transform 0.1s linear;
+    transition: transform 0.2s linear;
     transform: scale(0); }
   .heart:hover {
     -webkit-animation: ease-in-out heart 400ms both;
             animation: ease-in-out heart 400ms both; }
     .heart:hover svg:last-child {
       color: #a42d2d;
-      transition: transform 0.2s linear, opacity 0.2s linear;
+      transition: transform 0.4s linear;
       transform: scale(1); }
 
 footer {
