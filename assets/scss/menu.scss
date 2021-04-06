@@ -97,6 +97,10 @@ main {
             }
         }
 
+        button {
+            margin: 0 auto;
+        }
+
         // for starter, dish and dessert
         section {
             padding: 0;
@@ -129,8 +133,6 @@ main {
                 justify-content: space-around;
                 flex-direction: row;
                 flex: 0 0 100%;
-                //justify-content: space-between;
-                //align-items: center;
                 height: 80px;
                 box-shadow: 0px 3px 8px #e5e5e5;
 
@@ -158,6 +160,13 @@ main {
                     }
                 }
 
+                // Price
+                span {
+                    display: flex;
+                    flex: 0 0 auto;
+                    align-items: center;
+                }
+
                 // Right section
                 > div:last-child {
                     display: flex;
@@ -165,17 +174,10 @@ main {
                     flex: 0 0 auto;
                     height: 100%;
 
-                    // Price
-                    span {
-                        display: flex;
-                        flex: 0 0 auto;
-                        align-items: center;
-                    }
-
                     // Checkbox container
                     div {
                         display: flex;
-                        flex: 0 0 auto;
+                        flex: 0 0 100%;
 
                         input[type=checkbox] {
                             display: none;
@@ -183,8 +185,9 @@ main {
                             // &:checked + label {
                             //     opacity: 1;
                             //     background-color: darken($color-tertiary, 15%);
-                            //     width: auto; height: auto;
+                            //     width: 64px; height: auto;
                             //     flex: 1 0 100%;
+                            //     margin-right: -10px;
 
                             //     i {
                             //         transition-duration: 450ms;
@@ -226,8 +229,9 @@ main {
                 //         input[type=checkbox] + label {
                 //             transition-duration: 400ms;
                 //             opacity: 1;
+                //             width: 64px; height: auto;
                 //             flex: 1 0 100%;
-                //             width: auto; height: auto;
+                //             margin-right: -10px;
                 //         }
                 //     }
                 // }
