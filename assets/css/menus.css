@@ -245,19 +245,4 @@ main #menu {
         main #menu section article > div:last-child i {
           transition-duration: 200ms;
           width: 0; }
-      main #menu section article:hover div:first-child {
-        transition-duration: 400ms;
-        flex: 0 0 50%; }
-      main #menu section article:hover span {
-        flex: 0 0 auto; }
-      main #menu section article:hover div:last-child {
-        transition-duration: 400ms;
-        opacity: 1;
-        flex: 0 0 20%; }
-        main #menu section article:hover div:last-child i {
-          transition-delay: 200ms;
-          transition-duration: 200ms;
-          transform: rotate(360deg);
-          width: 32px;
-          font-size: 1.5em; }
 

@@ -193,31 +193,31 @@ main {
                 }
 
                 // Card:hover
-                &:hover {
+                // &:hover {
 
-                    div:first-child {
-                        transition-duration: 400ms;
-                        flex: 0 0 50%;
-                    }
-                    span {
-                        flex: 0 0 auto;
-                    }
-                    // Checkbox container
-                    div:last-child {
-                        transition-duration: 400ms;
-                        opacity: 1;
-                        flex: 0 0 20%;
+                //     div:first-child {
+                //         transition-duration: 400ms;
+                //         flex: 0 0 50%;
+                //     }
+                //     span {
+                //         flex: 0 0 auto;
+                //     }
+                //     // Checkbox container
+                //     div:last-child {
+                //         transition-duration: 400ms;
+                //         opacity: 1;
+                //         flex: 0 0 20%;
                         
-                        i {
-                            transition-delay: 200ms;
-                            transition-duration: 200ms;
-                            transform: rotate(360deg);
+                //         i {
+                //             transition-delay: 200ms;
+                //             transition-duration: 200ms;
+                //             transform: rotate(360deg);
 
-                            width: 32px;
-                            font-size: 1.5em;
-                        }
-                    }
-                }
+                //             width: 32px;
+                //             font-size: 1.5em;
+                //         }
+                //     }
+                // }
             }
         }
     }
