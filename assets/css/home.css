@@ -83,7 +83,7 @@ html, body, *, *:before, *:after {
   from {
     transform: scale(1); }
   50% {
-    opacity: .3;
+    opacity: .5;
     transform: scale(2.2); }
   to {
     transform: scale(1.5); } }
@@ -92,7 +92,7 @@ html, body, *, *:before, *:after {
   from {
     transform: scale(1); }
   50% {
-    opacity: .3;
+    opacity: .5;
     transform: scale(2.2); }
   to {
     transform: scale(1.5); } }
