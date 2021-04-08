@@ -1,80 +1,41 @@
-@keyframes heart {
-    from {
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: .5;
-        transform: scale(2.2);
-    }
-  
-    to {
-        transform: scale(1.5);
-    }
-}
-@keyframes heart-reverse {
-    from {
-        transform: scale(1.5);
-    }
-  
-    to {
-        transform: scale(1);
-    }
-}
-@keyframes heart-fill {
-    from {
-        transform: scale3d(0,0,0);
-    }
-
-    to {
-        transform: scale3d(1.5,1.5,1.5);
-    }
-}
-@keyframes heart-fill-reverse {
-    from {
-        transform: scale(1.5);
-    }
-
-    to {
-        transform: scale(0);
-    }
-}
-
-
 .heart {
     cursor: pointer;
     display: flex;
-    height: 3em;
-    width: 3em;
+    height: 1.3em;
+    width: 1.3em;
     overflow: hidden;
     position: relative;
-    animation: heart-reverse 800ms forwards;
+
+    transform: scale(1);
+    transition: transform .2s linear;
 
     svg {
-        width: 1.2em;
-        top: 50%;
-        margin-top: -.6em;
-        left: 50%;
-        margin-left: -.6em;
-    }
-
-    svg:first-child {
-        color: rgb(216, 112, 112);
+        width: 100%;
+        color: $color-tertiary;
         position: absolute;
-    }
+        z-index: 10;
 
-    svg:last-child {
-        color: rgb(164, 45, 45);
-        position: absolute;
-        animation: heart-fill-reverse 800ms forwards;
+        &:last-child {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            color: $color-tertiary;
+            opacity: 0;
+            transform: scale(0);
+            transition: transform 0.2s 0.2s linear, opacity 0.2s 0.2s linear;
+            transform-origin: center 80%;
+        }
     }
  
     &:hover {
-        svg:first-child {
-            animation: heart 800ms forwards;
-        }
         svg:last-child {
-            animation: heart-fill 800ms forwards;
+            transition: transform 0.4s linear, opacity 0.4s linear;
+            transform: scale(1);
+            opacity: 1;
         }
+        
+        transition: transform .2s .4s linear;
+        transform: scale(1.5);
     }
 }
