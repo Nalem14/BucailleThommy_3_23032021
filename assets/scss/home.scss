@@ -181,13 +181,8 @@ main {
                     }
                 }
 
-                i {
-                    margin-right: 20px;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                }
-
-                figure {
+                // Header card image
+                figure:first-child {
                     border-radius: 15px 15px 0 0;
                     overflow: hidden;
                     flex-basis: 100%;
@@ -200,6 +195,12 @@ main {
                     img {
                         width: 100%;
                     }
+                }
+
+                // Heart
+                .heart {
+                    margin-right: 20px;
+                    margin-bottom: auto;
                 }
             }
         }
