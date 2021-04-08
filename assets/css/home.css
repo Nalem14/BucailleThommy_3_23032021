@@ -86,15 +86,13 @@ html, body, *, *:before, *:after {
   display: flex;
   height: 1.3em;
   width: 1.3em;
-  overflow: hidden;
   position: relative;
   transform: scale(1);
   transition: transform .2s linear; }
   .heart svg {
     width: 100%;
     color: #99E2D0;
-    position: absolute;
-    z-index: 10; }
+    position: absolute; }
     .heart svg:last-child {
       content: "";
       width: 100%;
