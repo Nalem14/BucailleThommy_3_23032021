@@ -81,6 +81,36 @@ html, body, *, *:before, *:after {
     opacity: .75;
     box-shadow: 3px 10px 16px #c3c3c3; }
 
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes fadeOut {
+  from {
+    transform: scale(1); }
+  from, to {
+    background-color: transparent; }
+  to {
+    transform: scale(0);
+    display: none; } }
+
+@keyframes fadeOut {
+  from {
+    transform: scale(1); }
+  from, to {
+    background-color: transparent; }
+  to {
+    transform: scale(0);
+    display: none; } }
+
 .heart {
   cursor: pointer;
   display: flex;
@@ -124,6 +154,43 @@ html, body, *, *:before, *:after {
       transition: transform 0.4s linear, opacity 0.4s linear;
       transform: scale(1);
       opacity: 1; }
+
+#loading-spinner {
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #f6f6f6;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: fadeOut .6s 2s ease-in-out forwards;
+          animation: fadeOut .6s 2s ease-in-out forwards; }
+  #loading-spinner div {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #c9c9c9;
+    border-radius: 50%;
+    box-shadow: 0px 0px 60px 0px #c9c9c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; }
+    #loading-spinner div::before {
+      content: "";
+      position: absolute;
+      z-index: -10;
+      width: 120px;
+      height: 120px;
+      border-top: 3px solid #9356DC;
+      border-radius: 50%;
+      box-shadow: 0px -5px 12px 0px #9356DC;
+      -webkit-animation: rotating 1s linear infinite;
+              animation: rotating 1s linear infinite; }
+    #loading-spinner div span {
+      font-family: Shrikhand, Arial, sans-serif; }
 
 footer {
   background-color: #353535;
