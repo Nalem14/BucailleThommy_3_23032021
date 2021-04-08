@@ -89,16 +89,24 @@ html, body, *, *:before, *:after {
   position: relative;
   transform: scale(1);
   transition: transform .2s linear; }
+  .heart::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle farthest-side at 0 0, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0.8) 98%, rgba(255, 255, 255, 0) 100%) no-repeat;
+    background-position: -140px 0; }
   .heart svg {
     width: 100%;
-    color: #99E2D0;
+    color: #6c27be;
     position: absolute; }
     .heart svg:last-child {
       content: "";
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      color: #99E2D0;
       opacity: 0;
       transform: scale(0);
       transition: transform 0.2s 0.2s linear, opacity 0.2s 0.2s linear;
@@ -106,6 +114,12 @@ html, body, *, *:before, *:after {
   .heart:hover {
     transition: transform .2s .4s linear;
     transform: scale(1.5); }
+    .heart:hover::after {
+      transition: background-position 1s;
+      background-position: 10px 0; }
+    .heart:hover svg:first-child {
+      color: #c9abee;
+      z-index: 10; }
     .heart:hover svg:last-child {
       transition: transform 0.4s linear, opacity 0.4s linear;
       transform: scale(1);
