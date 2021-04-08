@@ -147,7 +147,6 @@ main {
 
                 // Left section
                 > div:first-child {
-                    transition-duration: 400ms;
                     display: flex;
                     flex: 1 1 70%;
                     flex-direction: column;
@@ -175,60 +174,13 @@ main {
 
                 // Price
                 span {
-                    transition-duration: 400ms;
                     display: flex;
                     flex: 1 1 10%;
                     align-items: flex-end;
                     margin-bottom: 20px;
                     justify-content: right;
                 }
-
-                // Check section
-                > div:last-child {
-                    transition-duration: 200ms;
-                    display: flex;
-                    overflow: hidden;
-                    opacity: 0;
-                    color: #FFF;
-                    font-size: 1.3em;
-                    background-color: $color-tertiary;
-                    border-radius: 0 20px 20px 0;
-                    align-items: center;
-                    justify-content: center;
-                    flex: 0 0 0;
-
-                    i {
-                        transition-duration: 200ms;
-                        width: 0;
-                    }
-                }
-
-                // Card:hover
-                // &:hover {
-
-                //     div:first-child {
-                //         transition-duration: 400ms;
-                //         flex: 0 0 50%;
-                //     }
-                //     span {
-                //         flex: 0 0 auto;
-                //     }
-                //     // Checkbox container
-                //     div:last-child {
-                //         transition-duration: 400ms;
-                //         opacity: 1;
-                //         flex: 0 0 20%;
-                        
-                //         i {
-                //             transition-delay: 200ms;
-                //             transition-duration: 200ms;
-                //             transform: rotate(360deg);
-
-                //             width: 32px;
-                //             font-size: 1.5em;
-                //         }
-                //     }
-                // }
+                
             }
         }
     }

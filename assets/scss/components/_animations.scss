@@ -126,3 +126,52 @@
         }
     }
 }
+
+#menu section article {
+    // Check section
+    > div:last-child {
+        transition: flex .2s linear, opacity .2s linear, margin-right .2s .2s;
+        display: flex;
+        overflow: hidden;
+        opacity: 0;
+        color: #FFF;
+        font-size: 1.3em;
+        background-color: $color-tertiary;
+        border-radius: 0 20px 20px 0;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 0;
+
+        i {
+            font-size: 1.5em;
+            transition: width .4s linear;
+            width: 0;
+        }
+    }
+    
+    //Card:hover
+    &:hover {
+
+        div:first-child {
+            transition-duration: 400ms;
+            flex: 0 0 70%;
+        }
+        span {
+            flex: 0 0 10%;
+        }
+        // Checkbox container
+        div:last-child {
+            transition: margin-right 0s, flex .2s linear, opacity .2s linear;
+            opacity: 1;
+            flex: 0 0 20%;
+            margin-right: -15px;
+            
+            i {
+                transition: transform .3s .1s linear;
+                transform: rotate(360deg);
+
+                width: 32px;
+            }
+        }
+    }
+}

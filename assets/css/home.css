@@ -193,6 +193,40 @@ html, body, *, *:before, *:after {
       font-family: Shrikhand, Arial, sans-serif;
       font-size: 1.3em; }
 
+#menu section article > div:last-child {
+  transition: flex .2s linear, opacity .2s linear, margin-right .2s .2s;
+  display: flex;
+  overflow: hidden;
+  opacity: 0;
+  color: #FFF;
+  font-size: 1.3em;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 0; }
+  #menu section article > div:last-child i {
+    font-size: 1.5em;
+    transition: width .4s linear;
+    width: 0; }
+
+#menu section article:hover div:first-child {
+  transition-duration: 400ms;
+  flex: 0 0 70%; }
+
+#menu section article:hover span {
+  flex: 0 0 10%; }
+
+#menu section article:hover div:last-child {
+  transition: margin-right 0s, flex .2s linear, opacity .2s linear;
+  opacity: 1;
+  flex: 0 0 20%;
+  margin-right: -15px; }
+  #menu section article:hover div:last-child i {
+    transition: transform .3s .1s linear;
+    transform: rotate(360deg);
+    width: 32px; }
+
 footer {
   background-color: #353535;
   color: #fff; }
