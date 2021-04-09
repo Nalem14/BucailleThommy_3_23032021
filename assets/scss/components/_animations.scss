@@ -144,8 +144,9 @@
 
         i {
             font-size: 1.5em;
-            transition: width .4s linear;
+            transition: width .4s linear, transform .2s linear;
             width: 0;
+            transform: rotate(90deg);
         }
     }
     
@@ -162,13 +163,13 @@
         }
         // Checkbox container
         div:last-child {
-            transition: margin-right 0s, flex .2s linear, opacity .2s linear;
+            transition: margin-right 0s, flex .4s linear, opacity .4s linear;
             opacity: 1;
             flex: 0 0 80px;
             margin-right: -15px;
             
             i {
-                transition: transform .3s .1s linear;
+                transition: transform .4s linear;
                 transform: rotate(360deg);
 
                 width: 32px;
