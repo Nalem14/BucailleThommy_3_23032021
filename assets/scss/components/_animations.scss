@@ -128,6 +128,11 @@
 }
 
 #menu section article {
+    > div:first-child {
+        flex: 1 0 70%;
+        transition: flex .2s;
+    }
+
     // Check section
     > div:last-child {
         transition: flex .2s linear, opacity .2s linear, margin-right .2s .2s;
