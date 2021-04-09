@@ -197,8 +197,12 @@ html, body, *, *:before, *:after {
   flex: 1 0 70%;
   transition: flex .5s; }
 
+#menu section article span {
+  flex: 0 0 15px;
+  margin-right: 15px; }
+
 #menu section article > div:last-child {
-  transition: flex .5s linear, opacity .5s linear, margin-right .5s .5s;
+  transition: flex .5s linear, opacity .5s linear;
   display: flex;
   overflow: hidden;
   opacity: 0;
@@ -208,10 +212,8 @@ html, body, *, *:before, *:after {
   border-radius: 0 20px 20px 0;
   align-items: center;
   justify-content: center;
-  flex: 0 0 0; }
-  #menu section article > div:last-child span {
-    flex: 1 1 10%;
-    transition: flex .5s linear; }
+  flex: 0 0 0;
+  margin-right: -15px; }
   #menu section article > div:last-child i {
     font-size: 1.5em;
     transition: transform .5s linear;
@@ -221,15 +223,10 @@ html, body, *, *:before, *:after {
   transition-duration: 500ms;
   flex: 1; }
 
-#menu section article:hover span {
-  flex: 0 0 15px;
-  margin-right: 15px; }
-
 #menu section article:hover div:last-child {
   transition: margin-right 0s, flex .5s linear, opacity .5s linear;
   opacity: 1;
-  flex: 0 0 80px;
-  margin-right: -15px; }
+  flex: 0 0 80px; }
   #menu section article:hover div:last-child i {
     transition: transform .5s linear;
     transform: rotate(360deg);
