@@ -213,7 +213,7 @@ html, body, *, *:before, *:after {
 
 #menu section article:hover div:first-child {
   transition-duration: 400ms;
-  flex: 1 0 70%; }
+  flex: 1; }
 
 #menu section article:hover span {
   flex: 0 0 15px;
