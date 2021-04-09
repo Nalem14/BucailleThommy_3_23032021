@@ -211,11 +211,10 @@ html, body, *, *:before, *:after {
   flex: 0 0 0; }
   #menu section article > div:last-child span {
     flex: 1 1 10%;
-    transition: flex .2s linear; }
+    transition: flex .4s linear; }
   #menu section article > div:last-child i {
     font-size: 1.5em;
-    transition: width .4s linear, transform .4s linear;
-    width: 0;
+    transition: transform .4s linear;
     transform: rotate(90deg); }
 
 #menu section article:hover div:first-child {

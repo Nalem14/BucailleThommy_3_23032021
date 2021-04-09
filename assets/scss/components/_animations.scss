@@ -149,13 +149,12 @@
 
         span {
             flex: 1 1 10%;
-            transition: flex .2s linear;
+            transition: flex .4s linear;
         }
 
         i {
             font-size: 1.5em;
-            transition: width .4s linear, transform .4s linear;
-            width: 0;
+            transition: transform .4s linear;
             transform: rotate(90deg);
         }
     }
@@ -181,7 +180,6 @@
             i {
                 transition: transform .4s linear;
                 transform: rotate(360deg);
-
                 width: 32px;
             }
         }
