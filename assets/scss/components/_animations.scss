@@ -23,6 +23,35 @@
     }
 }
 
+@keyframes menu-lazy-in {
+    from {
+        transform: scaleX(0);
+        opacity: .1;
+    }
+
+    75%,100% {
+        opacity: 1;
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+#menu {
+    @for $i from 1 to 6 {
+        section:nth-child(#{$i}) {
+            @include lazy-menu-anim($i*$i*.2s, right);
+
+            @for $j from 1 to 6 {
+                article:nth-child(#{$j}) {
+                    @include lazy-menu-anim($i*$i*.2s + $j*.3s);
+                }
+            }
+        }
+    }
+}
+
 .heart {
     cursor: pointer;
     display: flex;
