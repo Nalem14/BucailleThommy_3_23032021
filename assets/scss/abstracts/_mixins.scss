@@ -1,7 +1,5 @@
-@mixin lazy-menu-anim($delay, $direction: top) {
-    transform: scaleY(0);
+@mixin lazy-menu-anim($delayIn, $delayUp, $duration: .5s) {
+    animation: menu-lazy-in $duration $delayIn forwards ease-out, menu-lazy-up $duration $delayUp forwards ease-out;
+    transform-origin: bottom;
     opacity: 0;
-    animation: menu-lazy-in .5s forwards;
-    animation-delay: #{$delay};
-    transform-origin: $direction;
 }

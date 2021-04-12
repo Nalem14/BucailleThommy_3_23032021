@@ -25,26 +25,30 @@
 
 @keyframes menu-lazy-in {
     from {
-        transform: scaleY(0);
         opacity: 0;
     }
-
     to {
         opacity: 1;
-        transform: scaleY(1);
+    }
+}
+
+@keyframes menu-lazy-up {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
     }
 }
 
 #menu {
     @for $i from 1 through 3 {
         section:nth-of-type(#{$i}) {
-            @include lazy-menu-anim($i*$i*.2s);
-            @debug "[MENU] Delay section:nth-child(#{$i}) is #{$i*$i*.2s}";
+            @include lazy-menu-anim($i*$i*.2s, 0);
 
             @for $j from 1 through 4 {
                 article:nth-of-type(#{$j}) {
-                    @include lazy-menu-anim($i*$i*.2s + $j*.3s);
-                    @debug "[MENU] Delay article:nth-child(#{$j}) is #{$i*$i*.2s + $j*.3s}";
+                    @include lazy-menu-anim($i*$i*.2s + $j*.2s, $i*$i*.2s + $j*.2s, .6s,);
                 }
             }
         }
