@@ -42,10 +42,12 @@
     @for $i from 1 to 6 {
         section:nth-child(#{$i}) {
             @include lazy-menu-anim($i*$i*.2s, right);
+            @debug "[MENU] Delay section:nth-child(#{$i}) is #{$i*$i*.2s}";
 
             @for $j from 1 to 6 {
                 article:nth-child(#{$j}) {
                     @include lazy-menu-anim($i*$i*.2s + $j*.3s);
+                    @debug "[MENU] Delay article:nth-child(#{$j}) is #{$i*$i*.2s + $j*.3s}";
                 }
             }
         }
