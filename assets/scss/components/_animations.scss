@@ -25,27 +25,24 @@
 
 @keyframes menu-lazy-in {
     from {
-        transform: scaleX(0);
-        opacity: .1;
-    }
-
-    75%,100% {
-        opacity: 1;
+        transform: scaleY(0);
+        opacity: 0;
     }
 
     to {
-        transform: scaleX(1);
+        opacity: 1;
+        transform: scaleY(1);
     }
 }
 
 #menu {
-    @for $i from 1 to 6 {
-        section:nth-child(#{$i}) {
-            @include lazy-menu-anim($i*$i*.2s, right);
+    @for $i from 1 through 3 {
+        section:nth-of-type(#{$i}) {
+            @include lazy-menu-anim($i*$i*.2s);
             @debug "[MENU] Delay section:nth-child(#{$i}) is #{$i*$i*.2s}";
 
-            @for $j from 1 to 6 {
-                article:nth-child(#{$j}) {
+            @for $j from 1 through 4 {
+                article:nth-of-type(#{$j}) {
                     @include lazy-menu-anim($i*$i*.2s + $j*.3s);
                     @debug "[MENU] Delay article:nth-child(#{$j}) is #{$i*$i*.2s + $j*.3s}";
                 }
