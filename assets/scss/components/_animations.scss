@@ -44,11 +44,11 @@
 #menu {
     @for $i from 1 through 3 {
         section:nth-of-type(#{$i}) {
-            @include lazy-menu-anim($i*$i*.2s, 0);
+            @include lazy-menu-anim($i*$i*.3s, 0);
 
             @for $j from 1 through 4 {
                 article:nth-of-type(#{$j}) {
-                    @include lazy-menu-anim($i*$i*.2s + $j*.2s, $i*$i*.2s + $j*.2s, .6s,);
+                    @include lazy-menu-anim($i*$i*.3s + $j*.2s, $i*$i*.2s + $j*.2s, .6s,);
                 }
             }
         }
