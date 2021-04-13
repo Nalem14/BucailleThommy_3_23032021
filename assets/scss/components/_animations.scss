@@ -23,6 +23,38 @@
     }
 }
 
+@keyframes menu-lazy-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menu-lazy-up {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#menu {
+    @for $i from 1 through 3 {
+        section:nth-of-type(#{$i}) {
+            @include lazy-menu-anim($i*$i*.3s, 0);
+
+            @for $j from 1 through 4 {
+                article:nth-of-type(#{$j}) {
+                    @include lazy-menu-anim($i*$i*.3s + $j*.2s, $i*$i*.2s + $j*.2s, .8s,);
+                }
+            }
+        }
+    }
+}
+
 .heart {
     cursor: pointer;
     display: flex;
