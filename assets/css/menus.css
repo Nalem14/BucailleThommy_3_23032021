@@ -233,7 +233,10 @@ html, body, *, *:before, *:after {
   .heart svg {
     width: 100%;
     color: #6c27be;
-    position: absolute; }
+    position: absolute;
+    transform: scale(1);
+    transition: transform .2s linear, opacity .2s linear;
+    opacity: 1; }
     .heart svg:last-child {
       content: "";
       width: 100%;
@@ -243,6 +246,10 @@ html, body, *, *:before, *:after {
       transform: scale(0);
       transition: transform .2s .2s linear, opacity .2s .2s linear;
       transform-origin: center 80%; }
+      .heart svg:last-child #SVGID_1_ stop:first-child {
+        stop-color: #ff93e1; }
+      .heart svg:last-child #SVGID_1_ stop:last-child {
+        stop-color: #6023a9; }
   .heart:hover {
     transition: transform .2s .4s linear;
     transform: scale(1.5); }
@@ -251,8 +258,12 @@ html, body, *, *:before, *:after {
       background-position: 10px 0; }
     .heart:hover svg:first-child {
       color: #c9abee;
-      z-index: 10; }
+      z-index: 10;
+      transform: scale(0);
+      transition: transform .4s .4s linear, opacity .4s .4s linear;
+      opacity: 0; }
     .heart:hover svg:last-child {
+      width: 100%;
       transition: transform 0.4s linear, opacity 0.4s linear;
       transform: scale(1);
       opacity: 1; }

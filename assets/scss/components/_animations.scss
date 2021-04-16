@@ -65,6 +65,7 @@
     transform: scale(1);
     transition: transform .2s linear;
 
+    // gloss
     &::after {
         content: '';
         position: absolute;
@@ -79,11 +80,16 @@
         background-position: -140px 0;
     }
 
+    // Heart image
     svg {
         width: 100%;
         color: darken($color-primary, 15%);
         position: absolute;
+        transform: scale(1);
+        transition: transform .2s linear, opacity .2s linear;
+        opacity: 1;
 
+        // Second heart
         &:last-child {
             content: "";
             width: 100%;
@@ -93,28 +99,43 @@
             transform: scale(0);
             transition: transform .2s .2s linear, opacity .2s .2s linear;
             transform-origin: center 80%;
+
+            #SVGID_1_ stop:first-child {
+                stop-color: lighten($color-secondary, 5%)
+            }
+            #SVGID_1_ stop:last-child {
+                stop-color: darken($color-primary, 20%);
+            }
         }
     }
  
+    // .heart:hover
     &:hover {
+        transition: transform .2s .4s linear;
+        transform: scale(1.5);
+
+        // gloss
         &::after {
             transition: background-position 1s;
             background-position: 10px 0;
         }
 
+        // First heart
         svg:first-child {
             color: lighten($color-primary, 20%);
             z-index: 10;
+            transform: scale(0);
+            transition: transform .4s .4s linear, opacity .4s .4s linear;
+            opacity: 0;
         }
 
+        // Second heart
         svg:last-child {
+            width: 100%;
             transition: transform 0.4s linear, opacity 0.4s linear;
             transform: scale(1);
             opacity: 1;
         }
-        
-        transition: transform .2s .4s linear;
-        transform: scale(1.5);
     }
 }
 
