@@ -106,6 +106,14 @@
             #SVGID_1_ stop:last-child {
                 stop-color: darken($color-primary, 20%);
             }
+            @for $i from 1 through 4 {
+                #SVGID_1_#{$i} stop:first-child {
+                    stop-color: lighten($color-secondary, 5%)
+                }
+                #SVGID_1_#{$i} stop:last-child {
+                    stop-color: darken($color-primary, 20%);
+                }
+            }
         }
     }
  
